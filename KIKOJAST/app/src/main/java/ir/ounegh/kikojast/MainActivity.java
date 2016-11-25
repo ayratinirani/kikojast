@@ -52,7 +52,7 @@ public class MainActivity extends Activity
 	
 private ProgressDialog progressDialog;
 	
-	Button b1;
+	Button b1 ,b2;
 	EditText e;
 	ListView mlist;
 		
@@ -62,7 +62,20 @@ private ProgressDialog progressDialog;
 		setContentView(R.layout.main);
 		e=(EditText) findViewById(R.id.mainEditText);
 	
-		
+		b2=(Button) findViewById(R.id.secButton);
+		b2.setOnClickListener(new OnClickListener(){
+
+				@Override
+				public void onClick(View p1)
+				{
+					Intent i= new Intent(MainActivity.this,MyMocation.class);
+					startActivity(i);
+				}
+				
+			
+			
+		}
+		);
 		b1 = (Button) findViewById(R.id.mainButton);
 
 		b1.setOnClickListener(new OnClickListener(){
